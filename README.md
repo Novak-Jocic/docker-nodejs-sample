@@ -159,7 +159,7 @@ docker ps
 
 Dadurch kann überprüft werden, ob die ToDo-Applikation erfolgreich als Container ausgeführt wird.
 
-# Wichtig
+# Wichtige befehle
 
 cd C:\Users\Novak\Desktop\VS-Code\docker-nodejs-sample
 
@@ -173,6 +173,11 @@ docker compose down
 
 http://localhost:3000
 
+--------------------------------------
 
+git status
+git add .
+git commit -m "Aktualisierungen"
+git push
 
 **Novak Jocic**
