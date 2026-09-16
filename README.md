@@ -159,5 +159,20 @@ docker ps
 
 Dadurch kann überprüft werden, ob die ToDo-Applikation erfolgreich als Container ausgeführt wird.
 
+# Wichtig
+
+cd C:\Users\Novak\Desktop\VS-Code\docker-nodejs-sample
+
+npm run dev
+
+docker compose up --build
+
+ctrl + c
+
+docker compose down
+
+http://localhost:3000
+
+
 
 **Novak Jocic**
