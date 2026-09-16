@@ -1,48 +1,159 @@
-# **Thema:** Erstellen einer ToDo-Applikation mit Markdown, Git, GitHub und Docker
+# ToDo-Applikation mit Node.js und Docker
 
-In dieser Abschlussaufgabe werden alle erlernten Fähigkeiten in den Bereichen **Markdown**, **Git**, **GitHub** und **Docker** kombiniert. Die Aufgabe besteht darin, eine ToDo-Applikation zu erstellen und diese in einem Docker-Container bereitzustellen.
 
-### **Aufgabenstellung:**
+# Materialien
 
-1. **GitHub-Fork erstellen:**
-   - Erstelle einen **Fork** des folgenden GitHub-Repositories: [docker-nodejs-sample](https://github.com/ICT-BLJ/docker-nodejs-sample).
-   - Clone deinen Fork lokal auf deinen Computer.
+Für die Installation und Ausführung des Projekts werden folgende Programme benötigt:
 
-2. **Erstellen einer README-Datei in Markdown:**
-   - Erstelle eine **README.md** Datei im Root-Verzeichnis des Projekts.
-   - Die README soll alle Schritte zur **Installation des Projekts** enthalten. Dazu gehören:
-     - Klonen des Repositories
-     - Installation der notwendigen Pakete
-     - Docker-Konfiguration und -Installation
-     - Starten der Applikation in einem Docker-Container
-   - Nutze [Markdown](https://www.markdownguide.org/cheat-sheet/) für die Struktur und Formatierung der Datei.
+Git
+Node.js
+npm
+Docker Desktop
+Visual Studio Code
 
-3. **Dokumentation der Vorgehensweise:**
-   - Verfasse eine vollständige **Dokumentation in Word**, in der die Arbeitsschritte beschrieben werden. Diese Schritte sind:
-     - Klonen des Repositories
-     - Einrichtung der Entwicklungsumgebung
-     - Erstellung der README.md
-     - Verwendung von Git (Commit, Push)
-     - Erstellung und Nutzung von Docker-Containern
-   - Verwende die während des Office-Kurses erarbeiteten Kenntnisse für das Erstellen dieses Dokuments.
 
-4. **Dockerize das Node.js-Projekt:**
-   - Verfolge die Anleitung unter [docs.docker.com](https://docs.docker.com/guides/language/nodejs/containerize/) ab dem Schritt **"Initialize Docker assets"**.
-   - Dein Ziel ist es, das Projekt in einem Docker-Container lauffähig zu machen, sodass am Ende eine **ToDo-Applikation** in einem Docker-Container bereitsteht.
+# 1. Repository klonen
 
-5. **Git-Workflows:**
-   - Arbeite mit **Git**, um Änderungen regelmäßig zu committen und auf GitHub zu pushen.
-   - Verwende sinnvolle Commit-Nachrichten, um deinen Fortschritt zu dokumentieren.
-   - Stelle sicher, dass dein finaler Stand auf GitHub vorhanden ist.
+Zuerst muss das GitHub-Repository auf den eigenen Computer geklont werden.
 
-6. **Abgabe:**
-   - **Dokumentation:** Lade die erstellte Word-Dokumentation (inkl. Screenshots und Beschreibung der Schritte) in dein Repository hoch.
-   - **GitHub-Link:** Stelle den Link zu deinem GitHub-Repository bereit, das den finalen Stand des Projekts enthält.
+Das Repository kann mit folgendem Befehl in Terminal von VS-Code geklont werden:
 
-### **Ziele der Aufgabe:**
-- Anwendung und Vertiefung von Git und GitHub.
-- Verfassen einer strukturierten Anleitung mit Markdown.
-- Containerisieren einer Node.js-Anwendung mit Docker.
-- Dokumentation des gesamten Prozesses in einem Word-Dokument.
-  
-Viel Erfolg bei der Umsetzung!
+
+git clone https://github.com/DEIN-BENUTZERNAME/docker-nodejs-sample.git
+
+
+
+Anschließend in das Projekt wechseln:
+
+
+cd docker-nodejs-sample
+
+
+# 2. Projekt öffnen
+
+Das Projekt kann anschließend geöffnet werden.
+
+
+
+Danach sollte die Projektstruktur ungefähr so aussehen:
+
+
+docker-nodejs-sample
+─ spec
+─ src
+─ .gitignore
+─ package-lock.json
+─ package.json
+─ README.md
+
+
+# 3. Node.js und npm überprüfen
+
+Vor der Installation sollte überprüft werden, ob Node.js und npm installiert sind.
+In Terminal folgendes eingeben:
+
+node --version
+
+
+und:
+
+
+npm --version
+
+
+Wenn beide Befehle eine Versionsnummer ausgeben, sind Node.js und npm verfügbar.
+
+
+# 4. Abhängigkeiten installieren
+
+Die benötigten Node.js-Pakete werden mit npm installiert.
+
+Im Hauptverzeichnis des Projekts folgenden Befehl ausführen:
+
+
+npm install
+
+
+# 5. Anwendung testen
+
+Vor der Containerisierung sollte die Anwendung getestet werden.
+
+Dazu kann der Entwicklungsserver mit folgendem Befehl gestartet werden:
+
+
+npm run dev
+
+
+Wenn die Anwendung erfolgreich startet, kann sie über die im Terminal angegebene Adresse aufgerufen werden.
+
+Zum Beenden des Servers folgendes drücken:
+
+
+Ctrl + C
+
+
+# 6. Docker installieren
+
+Für die Containerisierung wird Docker benötigt.
+
+Dazu muss Docker Desktop installiert werden.
+
+Nach der Installation sollte überprüft werden, ob Docker funktioniert:
+
+
+docker --version
+
+
+
+Docker Desktop muss während der Arbeit gestartet sein.
+
+
+# 7. Docker-Dateien erstellen
+
+Für die Containerisierung werden folgende Dateien benötigt:
+
+text
+docker-nodejs-sample/
+├── Dockerfile
+├── .dockerignore
+├── package.json
+├── package-lock.json
+├── src/
+├── spec/
+└── README.md
+
+
+# 8. Docker Image erstellen
+
+Nachdem die Docker-Dateien erstellt wurden, wird das Docker-Image erstellt.
+
+In Terminal folgendes eingeben:
+
+
+docker build -t todo-app .
+
+
+# 9. Docker Container starten
+
+Der Container kann anschließend mit folgendem Befehl gestartet werden:
+
+
+docker run -p 3000:3000 todo-app
+
+Die Anwendung kann anschließend im Browser aufgerufen werden:
+
+http://localhost:3000
+
+
+# 10. Laufende Container überprüfen
+
+Mit folgendem Befehl können alle aktuell laufenden Docker-Container angezeigt werden:
+
+
+docker ps
+
+
+Dadurch kann überprüft werden, ob die ToDo-Applikation erfolgreich als Container ausgeführt wird.
+
+
+**Novak Jocic**
