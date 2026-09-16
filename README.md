@@ -78,6 +78,10 @@ npm install
 
 Vor der Containerisierung sollte die Anwendung getestet werden.
 
+Ordner wechseln zu C:\Users\DEIN BENUTZERNAME\Desktop\VS-Code\docker-nodejs-sample mit folgendem befehl:
+
+cd docker-nodejs-sample
+
 Dazu kann der Entwicklungsserver mit folgendem Befehl gestartet werden:
 
 
